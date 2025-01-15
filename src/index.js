@@ -10,14 +10,16 @@ import Nav from './lesson1/Nav';
 import App from './lesson1/App';
 import Headerc from './lesson1/Headerc';
 import Footerc from './lesson1/Footerc';
+import Shoppingcart from './lesson2/Shoppingcart';
+import Cartproduct from './lesson2/cartproduct';
 
 const root = ReactDOM.createRoot(document.getElementById('root2'));
 root.render(
   <React.StrictMode>
     <Nav/>
-    <Headerc/>
-    <App />
-    <Footerc/>
+    <Shoppingcart/>
+  
+
   </React.StrictMode>
 );
 
