@@ -12,6 +12,47 @@ class Shoppingcart extends Component {
             {id:7,name:"steak",price:70,quantity:4},
         ]
      } 
+     
+     addquantity=(product)=>
+    {
+        //clone
+        const products=[...this.state.products];
+        const index=products.indexOf(product);
+        products[index]={...products[index]};
+        //edit
+        products[index].quantity++;
+        //set state
+
+        this.setState({products});
+
+    }
+     minusquantity=(product)=>
+    {
+        //clone
+        const products=[...this.state.products];
+        const index=products.indexOf(product);
+        products[index]={...products[index]};
+        //edit
+        products[index].quantity--;
+        //set state
+
+        this.setState({products});
+
+    }
+     
+    
+     deleteproduct=(product)=>{
+        //clone
+        //edit
+        const newproducts=this.state.products.filter((p)=>p.id!==product.id);
+        //delete
+        this.setState({products:newproducts});
+        //لو الاسمين زي بعض بنشيل الكولون والاسم التاني 
+        //this.setState({products});
+
+
+     }
+   
     render() { 
         return (
             <React.Fragment>
@@ -29,7 +70,7 @@ class Shoppingcart extends Component {
                     </thead>
                     <tbody>
                         {this.state.products.map((product)=>
-                            <Cartproduct product={product} key={product.id}/>
+                            <Cartproduct product={product} key={product.id} onDelete={this.deleteproduct} onIncrement={this.addquantity}  onDecrement={this.minusquantity}   />
                         )}
                     </tbody>
                 </table>

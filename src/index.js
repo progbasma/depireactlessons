@@ -6,19 +6,36 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Nav from './lesson1/Nav';
-import App from './lesson1/App';
-import Headerc from './lesson1/Headerc';
-import Footerc from './lesson1/Footerc';
-import Shoppingcart from './lesson2/Shoppingcart';
-import Cartproduct from './lesson2/cartproduct';
+import Nav from './lesson3/Nav.jsx';
+import Counter from './lesson3/Counter.jsx';
+import { BrowserRouter, Routes, Route } from "react-router";
+import About from './lesson3/About.jsx';
+import Contact from './lesson3/Contact';
+import Posts from './lesson3/Posts';
+import Notfoundpage from './lesson3/Notfound';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root2'));
 root.render(
   <React.StrictMode>
-    <Nav/>
-    <Shoppingcart/>
-  
+    
+    <BrowserRouter>
+    <Nav />
+    <Routes>
+
+      <Route index element={<Counter />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      
+      <Route path="/posts/:id?" element={<Posts />} />
+      
+      <Route path="/*" element={<Notfoundpage />} />
+
+    </Routes>
+  </BrowserRouter>
+   
+
 
   </React.StrictMode>
 );
