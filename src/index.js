@@ -25,8 +25,8 @@ import Protectedroute from './lesson4/Protectedroute.jsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root2'));
-const user=null;
-//const user={username:"ahmed"};
+//const user=null;
+const user={username:"ahmed"};
 root.render(
   <React.StrictMode>
     
