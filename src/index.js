@@ -9,10 +9,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Nav from './lesson3/Nav.jsx';
 import Counter from './lesson3/Counter.jsx';
 import { BrowserRouter, Routes, Route } from "react-router";
-import About from './lesson3/About.jsx';
+import About from './lesson3/About';
 import Contact from './lesson3/Contact';
 import Posts from './lesson3/Posts';
 import Notfoundpage from './lesson3/Notfound';
+import Caro from './lesson3/Caro.jsx';
 
 
 
@@ -31,6 +32,7 @@ root.render(
       <Route path="/posts/:id?" element={<Posts />} />
       
       <Route path="/*" element={<Notfoundpage />} />
+      <Route path="/carousel" element={<Caro/>} />
 
     </Routes>
   </BrowserRouter>

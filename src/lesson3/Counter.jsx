@@ -57,6 +57,9 @@ const Counter = () => {
         <button onClick={changeCounter2}>click</button>
 
         <button className='btn btn-primary' onClick={handler1}>go to aboutpage</button>
+
+
+       
         </>
      );
 }

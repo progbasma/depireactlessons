@@ -27,6 +27,10 @@ const Nav = () => {
                         <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  } to="/posts">Posts</NavLink>
                     </li>
                    
+                    <li className="nav-item">
+                        <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  } to="/carousel">Carousel</NavLink>
+                    </li>
+                   
                    
                     </ul>
                   
