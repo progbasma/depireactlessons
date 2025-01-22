@@ -1,45 +1,41 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-const Nav = () => {
-    return ( 
+
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+const NavC = () => {
+    return ( <>
         <>
-         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                <NavLink className="navbar-brand" href="#">Navbar</NavLink>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  } aria-current="page" to="/">Home</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  }
-                       
-                        to="/about">About</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  } to="/contact">Contact</NavLink>
-                    </li>
-                   
-                    <li className="nav-item">
-                        <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  } to="/posts">Posts</NavLink>
-                    </li>
-                   
-                    <li className="nav-item">
-                        <NavLink className={({ isActive }) =>    isActive ? " nav-link text-danger " : " nav-link text-black"  } to="/carousel">Carousel</NavLink>
-                    </li>
-                   
-                   
-                    </ul>
-                  
-                </div>
-                </div>
-            </nav>
+        
+       
+
+        <Navbar expand="lg" className="bg-body-tertiary">
+            <Container fluid>
+                <Navbar.Brand href="#home">Company Name</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                    <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+                    <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
+                    <Nav.Link as={NavLink} to="/posts">Posts</Nav.Link>
+                    <Nav.Link as={NavLink} to="/carousel">Carousel</Nav.Link>
+                    <Nav.Link as={NavLink} to="/dashboard">Dashboard</Nav.Link>
+
+                
+                </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
+      
+
         
         </>
-     );
+    
+    </> );
 }
  
-export default Nav;
+export default NavC;
