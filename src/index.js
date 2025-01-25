@@ -10,7 +10,7 @@ import Counter from './lesson3/Counter.jsx';
 import { BrowserRouter, Routes, Route } from "react-router";
 import About from './lesson3/About';
 import Contact from './lesson3/Contact';
-import Posts from './lesson3/Posts';
+import Post from './lesson5/Post.jsx';
 import Notfoundpage from './lesson3/Notfound';
 import Caro from './lesson3/Caro.jsx';
 
@@ -21,6 +21,9 @@ import Postsdash from './lesson4/Postsdash';
 import Productsdash from './lesson4/Productsdash';
 import Usersdash from './lesson4/Usersdash';
 import Protectedroute from './lesson4/Protectedroute.jsx';
+import Shop from './lesson5/Shop.jsx';
+import Blog from './lesson5/Blog.jsx';
+
 
 
 
@@ -28,7 +31,7 @@ const root = ReactDOM.createRoot(document.getElementById('root2'));
 //const user=null;
 const user={username:"ahmed"};
 root.render(
-  <React.StrictMode>
+ 
     
     <BrowserRouter>
     <NavC />
@@ -38,7 +41,7 @@ root.render(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       
-      <Route path="/posts/:id?" element={<Posts />} />
+    
       
       <Route path="/*" element={<Notfoundpage />} />
       <Route path="/carousel" element={<Caro/>} />
@@ -52,7 +55,15 @@ root.render(
         <Route path='users' element={<Usersdash/>} />
         <Route path='posts' element={<Postsdash/>} />
         <Route path='products' element={<Productsdash />} />
+       
+
       </Route>
+      <Route path='/shop' element={<Shop/>} />
+      <Route path='/blog' element={<Blog/>} />
+      <Route path="/posts/:id?" element={<Post />} /> 
+       
+
+  
 
      
 
@@ -61,7 +72,7 @@ root.render(
    
 
 
-  </React.StrictMode>
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function

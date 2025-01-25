@@ -23,6 +23,8 @@ const NavC = () => {
                     <Nav.Link as={NavLink} to="/posts">Posts</Nav.Link>
                     <Nav.Link as={NavLink} to="/carousel">Carousel</Nav.Link>
                     <Nav.Link as={NavLink} to="/dashboard">Dashboard</Nav.Link>
+                    <Nav.Link as={NavLink} to="/shop">Shop</Nav.Link>
+                    <Nav.Link as={NavLink} to="/blog">Blog</Nav.Link>
 
                 
                 </Nav>
