@@ -1,10 +1,7 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
-const Protectedroute = ({children,user}) => {
+const Protectedroute = ({children}) => {
 
-   if(  !user){
-    return <Navigate to="/" />
-   }
+   
    return children;
 }
  

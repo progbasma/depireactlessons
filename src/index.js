@@ -23,30 +23,51 @@ import Usersdash from './lesson4/Usersdash';
 import Protectedroute from './lesson4/Protectedroute.jsx';
 import Shop from './lesson5/Shop.jsx';
 import Blog from './lesson5/Blog.jsx';
+import Loginform from './lesson6/Loginform.jsx';
+import Registerform from './lesson6/Registerform.jsx';
+import Updatepass from './lesson6/Updatepass.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import Deleteform from './lesson6/Deleteform.jsx';
 
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root2'));
 //const user=null;
-const user={username:"ahmed"};
+//const user={username:"ahmed"};
 root.render(
  
     
     <BrowserRouter>
     <NavC />
+    <ToastContainer
+        
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+/>
+
+    
     <Routes>
 
       <Route index element={<Counter />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+
       
     
       
       <Route path="/*" element={<Notfoundpage />} />
       <Route path="/carousel" element={<Caro/>} />
       <Route path="/dashboard" element={
-        <Protectedroute user={user}>
+        <Protectedroute >
           <Dashboardlayout/>
         </Protectedroute>
         
@@ -60,7 +81,13 @@ root.render(
       </Route>
       <Route path='/shop' element={<Shop/>} />
       <Route path='/blog' element={<Blog/>} />
-      <Route path="/posts/:id?" element={<Post />} /> 
+      <Route path="/posts/:id" element={<Post />} /> 
+      <Route path="/loginf" element={<Loginform />} /> 
+      <Route path="/registerf" element={<Registerform />} /> 
+      <Route path="/updatep" element={<Updatepass />} /> 
+      <Route path="/deletef" element={<Deleteform />} /> 
+
+
        
 
   

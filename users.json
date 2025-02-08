@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "0c25",
+      "name": "basma",
+      "email": "prog.basma@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "0980",
+      "name": "sabah",
+      "email": "sabah@gmail.com",
+      "password": "123"
+    }
+  ]
+}
