@@ -10,6 +10,8 @@ const Blog = () => {
         const getallposts = async () => {
             const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
             const data = await response.data;
+            const response2 = await axios.get('https://jsonplaceholder.typicode.com/posts');
+            const data2 = await response.data;
            
             setallposts(data);
         }
